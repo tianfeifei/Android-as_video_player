@@ -1,11 +1,5 @@
 package media.ushow.as_video_player;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.changba.songstudio.video.player.ChangbaPlayer;
-import com.changba.songstudio.video.player.OnInitializedCallback;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +16,12 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.changba.songstudio.video.player.ChangbaPlayer;
+import com.changba.songstudio.video.player.OnInitializedCallback;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * RTMP的视频直播的播放器界面
@@ -217,7 +217,7 @@ public class ChangbaPlayerActivity extends Activity implements OnSeekBarChangeLi
 				};
 				playerController.setUseMediaCodec(false);
 				int width = getWindowManager().getDefaultDisplay().getWidth();
-				String path = "/mnt/sdcard/a_songstudio/huahua.flv";
+				String path = "/sdcard/hello.mp4";
 				playerController.init(path, holder.getSurface(), width, width, new OnInitializedCallback() {
 					public void onInitialized(OnInitialStatus onInitialStatus) {
 						// TODO: do your work here
